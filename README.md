@@ -9,3 +9,19 @@ out of a maze while he is being watched and has to evade obstacles.
 - F is the gate where the assasin the exit
 - X are obstacles, one shall not pass them, we gotta circumvent those
 - <,>,^,v characters are guards on watch, everything that falls within their line of sight acts as an obstacle.
+
+It means that the less than sign pointing left covers the entire first line with obstacles.
+
+Before
+{' ', ' ', ' ', ' ', '<'},
+{' ', 'X', ' ', ' ', ' '},
+{'A', 'X', ' ', 'X', ' '},
+{' ', 'X', ' ', 'X', 'F'}
+
+After
+{'X', 'X', 'X', 'X', '<'},
+{' ', 'X', ' ', ' ', ' '},
+{'A', 'X', ' ', 'X', ' '},
+{' ', 'X', ' ', 'X', 'F'}
+
+> This is taken care by the ammendXInGrid method which checks if there is a guard at any spots and if so after determining the covered area each field to be filled gets an X resulting in e.g. the "After" grid above.
