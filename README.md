@@ -29,3 +29,16 @@ After<br />
 ## Conditions
 - Tests were taken on small datasets
 - A, F, ' ', <,>,^,v characters are allowed only and expected in the output 
+
+## Example 
+Starting point <br />
+{' ', ' ', ' ', 'X', ' '},<br />
+{' ', 'X', ' ', ' ', ' '},<br />
+{'A', 'X', ' ', 'X', ' '},<br />
+{' ', ' ', ' ', '<', 'F'},<br />
+
+Result <br />
+{'.', '.', '.', 'X', ' '},<br />
+{'.', 'X', '.', '.', '.'},<br />
+{'A', 'X', ' ', 'X', '.'},<br />
+{'X', 'X', 'X', 'X', 'F'},<br />
